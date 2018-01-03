@@ -27,6 +27,14 @@ $(document).ready(function(){
     for(let x = 6; x < 12; x++){
         $("table tr:eq(" + x + ") td:eq(11)").css({"background-color": "black"});    	
     }
+	$("td").click(function(){
+		//console.log(($(this).css("background-color")));
+		if ($(this).css("background-color") == "rgba(0, 0, 0, 0)"){
+			$(this).css({"background-color": color.val()});	
+		}else{
+			$(this).css({"background-color": "rgba(0, 0, 0, 0)"});	
+		}	
+	})
 	//用户自定义
 	$("#result_submit").click(makeGrid);
 	function makeGrid(e) {
